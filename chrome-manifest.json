@@ -1,0 +1,107 @@
+{
+    "name": "MOZG | React®",
+    "short_name": "React",
+    "description": "Assista React",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "default_locale": "en",
+    "icons": [{
+            "src": "favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#ECEFF1",
+    "background_color": "#ECEFF1",
+    "homepage_url": "https://mozg.com.br/react/",
+    "devtools_page": "pwa/devtools.html",
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "bookmarks",
+        "chrome://favicon/",
+        "clipboardRead",
+        "clipboardWrite",
+        "contentSettings",
+        "contextMenus",
+        "cookies",
+        "debugger",
+        "geolocation",
+        "history",
+        "http://google.com/*",
+        "https://*/*",
+        "idle",
+        "management",
+        "notifications",
+        "tabs",
+        "tabs",
+        "tts",
+        "ttsEngine",
+        "webRequest",
+        "webNavigation",
+        "webRequestBlocking"
+    ],
+    "background": {
+        "scripts": [
+            "web-extension/background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "web-extension/icons/icon19.png",
+            "38": "web-extension/icons/icon19.png"
+        },
+        "default_title": "Mozg IPTV Brasil",
+        "_default_popup": "index.html"
+    },
+    "commands": {
+        "toggle-feature": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "linux": "Ctrl+Shift+U"
+            },
+            "description": "Send a 'toggle-feature' event"
+        }
+    },
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "content_scripts": [{
+        "exclude_matches": [
+            "*://developer.mozilla.org/*"
+        ],
+        "matches": [
+            "*://*.mozilla.org/*"
+        ],
+        "js": [
+            "web-extension/borderify.js"
+        ]
+    }],
+    "features": [
+        "print",
+        "debug",
+        "warn"
+    ],
+    "screenshots": [{
+            "src": "./web-extension/screenshots/screenshot-1.png"
+        },
+        {
+            "src": "./web-extension/screenshots/screenshot-2.png"
+        },
+        {
+            "src": "./web-extension/screenshots/screenshot-3.png"
+        } -
+    ]
+}
