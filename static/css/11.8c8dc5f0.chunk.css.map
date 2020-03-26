@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAaA,SACE,UAAW,CACX,WACF","file":"11.8c8dc5f0.chunk.css","sourcesContent":["/* html {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n} */\n\n#wrapper {\n  width: 100%;\n  height: 100%;\n}"]}

@@ -1,7 +1,7 @@
 {
     "name": "MOZG | React®",
-    "short_name": "React",
-    "description": "Assista React",
+    "short_name": "MOZG | Labs",
+    "description": "MOZG | React® | Morph",
     "version": "1.0.0",
     "manifest_version": 2,
     "default_locale": "en",
@@ -26,8 +26,8 @@
     "orientation": "portrait",
     "theme_color": "#ECEFF1",
     "background_color": "#ECEFF1",
-    "homepage_url": "https://mozg.com.br/react/",
-    "devtools_page": "pwa/devtools.html",
+    "homepage_url": "https://mozg.com.br/react-labs/",
+    "devtools_page": "web-extension/devtools.html",
     "permissions": [
         "<all_urls>",
         "activeTab",
@@ -65,7 +65,7 @@
             "19": "web-extension/icons/icon19.png",
             "38": "web-extension/icons/icon19.png"
         },
-        "default_title": "Mozg IPTV Brasil",
+        "default_title": "MOZG | React® | Morphos",
         "_default_popup": "index.html"
     },
     "commands": {
