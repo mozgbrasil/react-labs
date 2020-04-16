@@ -1,0 +1,69 @@
+{
+  "manifest_version": 2,
+  "name": "MOZG | React®",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "description": "MOZG | React® | WebExtension",
+  "icons": {
+    "16": "web-extension/icons/icon16.png",
+    "48": "web-extension/icons/icon48.png",
+    "128": "web-extension/icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "web-extension/icons/icon16.png",
+      "48": "web-extension/icons/icon48.png",
+      "128": "web-extension/icons/icon128.png"
+    },
+    "default_title": "MOZG | React® | WebExtension",
+    "_default_popup": "index.html"
+  },
+  "author": "Marcio dos Santos Amorim <mozgbrasil@gmail.com>",
+  "background": {
+    "scripts": ["web-extension/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "exclude_matches": ["*://developer.mozilla.org/*"],
+      "matches": ["*://*.mozilla.org/*", "<all_urls>"],
+      "css": ["web-extension/content_scripts.css"],
+      "js": ["web-extension/content_scripts.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com/ https://apis.google.com/ https://buttons.github.io/ https://platform.linkedin.com/ https://platform-src.linkedin.com/ https://platform.twitter.com/ https://connect.facebook.net/ https://codepen.io/ https://cdnjs.cloudflare.com/ https://platform.twitter.com/ https://apis.google.com/ 'sha256-teiXVyq9ZLiisw1CUGuz6yFRjFn7bhJRBAxQtRVmzRk='; object-src 'self';",
+  "devtools_page": "web-extension/devtools.html",
+  "homepage_url": "https://mozg.com.br/react-labs/",
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "bookmarks",
+    "clipboardRead",
+    "clipboardWrite",
+    "contextMenus",
+    "cookies",
+    "debugger",
+    "geolocation",
+    "history",
+    "http://google.com/*",
+    "https://*/*",
+    "idle",
+    "management",
+    "notifications",
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking"
+  ],
+  "short_name": "MOZG | Labs",
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "linux": "Ctrl+Shift+U"
+      },
+      "description": "Send a 'toggle-feature' event"
+    }
+  },
+  "web_accessible_resources": ["index.html"]
+}

@@ -1,10 +1,16 @@
-/**
- * This script is run whenever the devtools are open. (F12)
- * In here, we can create our panel with the React app inside.
- */
+//
+// browser.devtools.panels.create(
+//     "Mozg::Chrome",
+//     "/logo192.png",
+//     "/index.html"
+// );
 
-browser.devtools.panels.create(
-    "Mozg::Chrome",
-    "/logo192.png",
-    "/index.html"
-);
+//
+
+console.log("devtools.js: ");
+
+//
+
+console.log("window: ", Object.getOwnPropertyNames(window).sort());
+
+//

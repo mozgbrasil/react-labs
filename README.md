@@ -1,4 +1,5 @@
 [checkmark]: https://raw.githubusercontent.com/mozgbrasil/mozgbrasil.github.io/master/assets/images/logos/logo_32_32.png "MOZG"
+
 ![valid XHTML][checkmark]
 
 [getcomposer]: https://getcomposer.org/
@@ -6,48 +7,72 @@
 
 # MOZG | React®
 
-## Synopsis
+## Sinopse
 
-[Extension](https://stremio-dublados.herokuapp.com/) to [Stremio](https://www.stremio.com/) The next generation media center
+Automações usando [React®](https://react.org/)
 
-## Motivation
+## Motivação
 
-Disseminate the platform [Stremio](https://www.stremio.com/)
+Evangelizar a plataforma [React®](https://react.org/) ...
 
-Soon I must add new improvements
+## Descrição
 
-## Deploy
+Um aplicativo [React®](https://react.org/) ...
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/stremio-dublados)
+## Instalando a Web-Extension
 
-# Considerations
+Em ambiente local
 
-If you liked this project, consider giving a 🌟 or donating.
+Efetue o download da extensão
 
-- [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
-- [![paypal](https://www.paypal-brasil.com.br/logocenter/util/img/botao-checkout_horizontal_pb.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EH7PKDPXHMHWA)
-- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/stremio-dublados.svg?style=social)](https://github.com/mozgbrasil/stremio-dublados/stargazers)
-- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/stremio-dublados.svg?style=social)](https://github.com/mozgbrasil/stremio-dublados/watchers)
+Acesse (chrome://extensions)[chrome://extensions]
 
-Also check out my [GitHub Account](https://github.com/mozgbrasil) where I have other articles and applications that you might find interesting.
+Ative "developer mode"
 
-## To hire 👨💻
+Clique em "Carregar sem compactação" e selecione a pasta
 
-If you want me to help you, I'm available to hire.
+~~ou~~
 
-Contact support@mozg.com.br
+~~google-chrome --load-extension=/home/marcio/dados/projects/javascripts/lerna-monorepo/packages/react-labs/build_chrome --silent-launch~~
 
-## Where to follow
+~~google-chrome --uninstall-extension=nfbhmljimlnkjkhdecjagaefdpiiikgm --silent-launch~~
 
-You can follow me on social media 🐙😇 in the following places:
+## Perguntas mais frequentes "FAQ"
 
-- [GitHub] (https://github.com/mozgbrasil)
-- [Twitter] (https://twitter.com/mozgbrasil)
+### Sobre a Web-Extension
 
-## More about me
+https://developer.chrome.com/extensions/
 
-I not only live on GitHub, I try to do a lot of things not to bother myself. To know more about me, you can visit the following links:
+https://developer.chrome.com/extensions/manifest
 
-- [Articles](http://mozg.com.br/artigos/)
+https://chrome.google.com/webstore/devconsole/register?hl=pt-BR
+
+https://developer.mozilla.org/pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension
+
+    addons-linter /home/marcio/dados/projects/javascripts/lerna-monorepo/packages/react-labs/build-web-extension/
+
+    cd /home/marcio/dados/projects/javascripts/lerna-monorepo/packages/react-labs/build-web-extension/
+
+    zip -r -FS /home/marcio/Downloads/mozg-web-extension.zip * --exclude *.git*
+
+    cd /home/marcio/Downloads
+
+### Sobre as URLS da Web-Extension
+
+chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/index.html
+`chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/_generated_background_page.html`
+chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/web-extension/devtools.html
+
+### Download da Web-Extension
+
+https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D~~~~%26installsource%3Dondemand%26uc
+
+Executar em outro browser
+
+### Local de armazenamento das extensões
+
+ls -lah ~/.config/google-chrome/Default/Extensions/
+
+--
 
 :cat2:

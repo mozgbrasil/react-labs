@@ -1,78 +1,246 @@
-// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
+/* global chrome */
 
-window.onload = function() {
-  console.log("window.onload: background");
+console.log = function() {};
+
+// https://developer.chrome.com/extensions
+
+//
+
+console.log("starting: background.js: ");
+
+//
+
+// var items = [
+//   // "window",
+//   "chrome",
+//   "chrome.runtime"
+// ];
+
+// // items.forEach
+// items.map(function(value, index) {
+//   console.log(`${value}: `, Object.getOwnPropertyNames(eval(value)).sort());
+// });
+
+//
+
+/* ----------------------- */
+/* ----------------------- */
+/* --- Event Listeners --- */
+
+// https://github.com/explaain/savvy/blob/master/src/chrome/event-page.js
+
+chrome.runtime.onInstalled.addListener(details => {
+  console.log("chrome.runtime.onInstalled: ", details);
+  //
+  //   if (details && details.reason === "install")
+  //     chrome.tabs.create({ url: "https://mozg.com.br/chrome-installed" }, tab => {
+  //       console.log("New tab launched with https://mozg.com.br/chrome-installed");
+  //     });
+  //   else if (details && details.reason === "update")
+  //     chrome.tabs.query({ url: "chrome://newtab/" }, tabs => {
+  //       tabs.forEach(tab => {
+  //         chrome.tabs.update(tab.id, {
+  //           url: "chrome-extension://jejdapphghknjfjnjnbakipojmdcjgkd/newtab.html"
+  //         });
+  //       });
+  //     });
+  //
+  chrome.tabs.query({ currentWindow: true }, function(tabs) {
+    console.log("Number of tabs: " + tabs.length);
+  });
+  //
+});
+
+// onBeforeRequest
+chrome.webRequest.onBeforeRequest.addListener(
+  function(e) {
+    console.log("chrome.webRequest.onBeforeRequest.addListener: ", e);
+    if ("main_frame" == e.type) {
+      var t = e.url.split("?")[0].split("#")[0];
+
+      if (t.endsWith(".m3u") || t.endsWith(".m3u8"))
+        return {
+          redirectUrl: chrome.runtime.getURL("index.html") + "#" + e.url
+        };
+    }
+  },
+  { urls: ["<all_urls>"] },
+  ["blocking"]
+);
+
+// https://github.com/satendra02/react-chrome-extension/blob/master/public/app/background.js
+// Called when the user clicks on the browser action
+chrome.browserAction.onClicked.addListener(function(tab) {
+  console.log("chrome.browserAction.onClicked: ", tab);
+  //
+  //   chrome.tabs.create({
+  //     url: chrome.runtime.getURL("index.html")
+  //   });
+  chrome.tabs.create({ url: chrome.extension.getURL("index.html") }, function(
+    tab
+  ) {
+    console.log("chrome.tabs.create: ", tab);
+  });
+  // Send a message to the active tab
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    var activeTab = tabs[0];
+    chrome.tabs.sendMessage(activeTab.id, {
+      message: "clicked_browser_action"
+    });
+  });
+  //
+});
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  console.log("chrome.runtime.onMessage request: ", request);
+  console.log("chrome.runtime.onMessage sender: ", sender);
+  console.log("chrome.runtime.onMessage sendResponse: ", sendResponse);
+});
+
+//
+
+window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event) {
+  console.log("background", "receiveMessage: ", event);
+}
+
+//
+
+/* ----------------------- */
+/* ----------------------- */
+/* ------ Functions ------ */
+
+const sendToChrome = data => {
+  console.log("sendToChrome': ", data);
+  new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage(data, res => resolve(res)); // Needs catch => reject
+  });
 };
 
-// var settings = new Store("settings", {
-//     "sample_setting": "This is how you use Store.js to remember values"
-// });
+const sendMessageToCurrentTab = messageData => {
+  console.log("sendMessageToCurrentTab: ", messageData);
+  chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+    if (tabs.length && tabs[0].id)
+      chrome.tabs.sendMessage(tabs[0].id, messageData, response => {});
+  });
+};
+
+const sendMessageToAllTabs = messageData => {
+  console.log("sendMessageToAllTabs:", messageData);
+  chrome.tabs.query({}, tabs => {
+    console.log("tabs (sendMessageToAllTabs)", tabs);
+    tabs.forEach(tab => {
+      console.log(
+        "sending message to tab " + tab.id + " (event-page.js):",
+        messageData
+      );
+      chrome.tabs.sendMessage(tab.id, messageData, response => {});
+    });
+  });
+};
+
+//
 
 var _AnalyticsCode = "UA-73869264-1",
   _gaq = _gaq || [];
 _gaq.push(["_setAccount", _AnalyticsCode]),
   _gaq.push(["_trackEvent", "install", "" + new Date().getTime()]),
-  // (function () {
-  //   var e = document.createElement("script");
-  //   (e.type = "text/javascript"),
-  //     (e.async = !0),
-  //     (e.src = "https://ssl.google-analytics.com/ga.js");
-  //   var t = document.getElementsByTagName("script")[0];
-  //   t.parentNode.insertBefore(e, t);
-  // })(),
-  chrome.runtime.onInstalled.addListener(function() {
-    console.log("chrome.runtime.onInstalled.addListener");
-    console.log("You have installed M3U Client!");
-  }),
-  chrome.browserAction.onClicked.addListener(function() {
-    console.log("chrome.browserAction.onClicked.addListener");
-    chrome.tabs.create({
-      url: chrome.extension.getURL("index.html")
-    });
-  }),
-  chrome.webRequest.onBeforeRequest.addListener(
-    function(e) {
-      console.log("chrome.webRequest.onBeforeRequest.addListener");
-      if ("main_frame" == e.type) {
-        var t = e.url.split("?")[0].split("#")[0];
-        if (t.endsWith(".m3u") || t.endsWith(".m3u8"))
-          return {
-            redirectUrl: chrome.extension.getURL("index.html") + "#" + e.url
-          };
-      }
-    },
-    { urls: ["<all_urls>"] },
-    ["blocking"]
-  );
+  (function() {
+    var e = document.createElement("script");
+    (e.type = "text/javascript"),
+      (e.async = !0),
+      (e.src = "https://ssl.google-analytics.com/ga.js");
+    var t = document.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(e, t);
+  })();
 
-//example of using a message handler from the inject scripts
-// chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-//   chrome.pageAction.show(sender.tab.id);
-//   sendResponse();
-// });
+//
 
+//
 
+/* ----------------------- */
+/* ----------------------- */
+/* ---- DOM Functions ---- */
 
-/**
- * Listens for the app launching then creates the window
- *
- * @see http://developer.chrome.com/apps/app.runtime.html
- * @see http://developer.chrome.com/apps/app.window.html
- */
-chrome.app.runtime.onLaunched.addListener(function() {
-  // Center window on screen.
-  var screenWidth = screen.availWidth;
-  var screenHeight = screen.availHeight;
-  var width = 500;
-  var height = 300;
+//
 
-  chrome.app.window.create('index.html', {
-    id: "helloWorldID",
-    outerBounds: {
-      width: width,
-      height: height,
-      left: Math.round((screenWidth-width)/2),
-      top: Math.round((screenHeight-height)/2)
+/* ----------------------- */
+/* ----------------------- */
+/* --- ONLOAD Functions -- */
+
+//
+
+// https://github.com/rbrahul/Awesome-JSON-Viewer/blob/master/public/background.js
+
+//
+
+// https://github.com/vothaison/Steadfast-Chrome-Extension/blob/master/js/background/background.boa.js
+
+// Port under tracking
+var ports = [];
+
+chrome.runtime.onConnect.addListener(function(port) {
+  console.log("chrome.runtime.onConnect.addListener: ", port);
+
+  if (port.name !== "boa") return;
+
+  console.log("chrome.runtime.onConnect.addListener: port RECEIVED");
+
+  if (ports.indexOf(port) === -1) {
+    ports.push(port);
+  }
+
+  console.log("chrome.runtime.onConnect.addListener: ports", ports);
+
+  port.onDisconnect.addListener(function(port) {
+    console.log("port.onDisconnect.addListener: ", arguments);
+    var index = ports.indexOf(port);
+    ports.splice(index, 1);
+    console.log("port.onDisconnect.addListener: ports", ports);
+  });
+
+  port.onMessage.addListener(function(msg) {
+    console.log("port.onMessage.addListener: ", msg);
+    switch (msg.request) {
+      //
+      // Coordinate native messaging
+      //
+      case "post-native-client":
+        console.log("port.onMessage", "post-native-client", msg);
+
+        chrome.runtime.sendNativeMessage(
+          "com.example.native",
+          {
+            ServiceName: msg.data.ServiceName,
+            Request: msg.data.Request
+          },
+
+          function(response) {
+            console.log(
+              "chrome.runtime.sendNativeMessag response-native-client",
+              response
+            );
+
+            let message = {
+              from: "mozg_background",
+              response: "response-complete-native-client",
+              data: response ? JSON.parse(response.data) : "(NO NATIVE DATA)"
+            };
+
+            let targetOrigin = "*";
+
+            port.postMessage(message, targetOrigin);
+          }
+        );
+
+        break;
     }
   });
 });
+
+//
+
+// context menu
+
+//

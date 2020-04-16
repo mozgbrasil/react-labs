@@ -1,3 +1,102 @@
-window.onload = function() {
-  console.log("window.onload: foreground");
-};
+//
+
+// console.log = function() {};
+
+console.log("starting foreground.js: ");
+
+//
+
+let WimdowGetOwnPropertyNames = Object.getOwnPropertyNames(window).sort();
+// console.log("WimdowGetOwnPropertyNames: ", WimdowGetOwnPropertyNames);
+
+if (window.__MOZG) {
+  let WimdowGetOwnPropertyNames_MOZG = window.__MOZG.WimdowGetOwnPropertyNames;
+
+  let difference = WimdowGetOwnPropertyNames.filter(
+    x => !WimdowGetOwnPropertyNames_MOZG.includes(x)
+  ).concat(
+    WimdowGetOwnPropertyNames_MOZG.filter(
+      x => !WimdowGetOwnPropertyNames.includes(x)
+    )
+  );
+
+  //   console.log("difference in foreground.js: ", difference);
+}
+
+//
+
+// let obj = {
+//   window: window,
+//   "chrome.runtime": chrome.runtime
+// };
+
+// for (var [key, value] of Object.entries(obj)) {
+//   let label = key;
+//   console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
+// }
+
+//
+
+/* ----------------------- */
+/* ----------------------- */
+/* --- Event Listeners --- */
+
+//
+
+window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event) {
+  //   console.log("foreground", "receiveMessage: ", event);
+  //   event.source.window.postMessage("from_foreground", "*");
+}
+
+//
+
+if (window.location.protocol == "chrome-extension:") {
+  //
+  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    // console.log("chrome.runtime.onMessage request: ", request);
+    // console.log("chrome.runtime.onMessage sender: ", sender);
+    // console.log("chrome.runtime.onMessage sendResponse: ", sendResponse);
+  });
+  //
+  var extensionId = chrome.runtime.id;
+  var connectInfo = {
+    name: "Sample Communication"
+  };
+
+  //   console.log("extensionId: ", extensionId);
+
+  var port = chrome.runtime.connect(extensionId, connectInfo);
+
+  //   console.log("port: ", port);
+
+  let message = {
+    from: "mozg_foreground",
+    data: "Request Modified Value"
+  };
+
+  let targetOrigin = "*";
+
+  port.postMessage(message, targetOrigin);
+
+  port.onMessage.addListener(function(msg) {
+    // console.log("port.onMessage:  " + msg);
+    // console.log("Modified Value recieved is: " + msg);
+  });
+  //
+}
+
+//
+
+/* ----------------------- */
+/* ----------------------- */
+/* ------ Functions ------ */
+
+/* ----------------------- */
+/* ----------------------- */
+/* ---- DOM Functions ---- */
+
+/* ----------------------- */
+/* ----------------------- */
+/* --- ONLOAD Functions -- */
