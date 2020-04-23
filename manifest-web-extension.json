@@ -31,7 +31,7 @@
       "js": ["web-extension/content_scripts.js"]
     }
   ],
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com/ https://apis.google.com/ https://buttons.github.io/ https://platform.linkedin.com/ https://platform-src.linkedin.com/ https://platform.twitter.com/ https://connect.facebook.net/ https://codepen.io/ https://cdnjs.cloudflare.com/ https://platform.twitter.com/ https://apis.google.com/ 'sha256-teiXVyq9ZLiisw1CUGuz6yFRjFn7bhJRBAxQtRVmzRk='; object-src 'self';",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com/ https://apis.google.com/ https://cdnjs.cloudflare.com/ https://apis.google.com/ 'sha256-teiXVyq9ZLiisw1CUGuz6yFRjFn7bhJRBAxQtRVmzRk='; object-src 'self';",
   "devtools_page": "web-extension/devtools.html",
   "homepage_url": "https://mozg.com.br/react-labs/",
   "permissions": [

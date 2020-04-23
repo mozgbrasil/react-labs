@@ -9,7 +9,7 @@ console.log("starting foreground.js: ");
 let WimdowGetOwnPropertyNames = Object.getOwnPropertyNames(window).sort();
 // console.log("WimdowGetOwnPropertyNames: ", WimdowGetOwnPropertyNames);
 
-if (window.__MOZG) {
+if (window.__MOZG.WimdowGetOwnPropertyNames) {
   let WimdowGetOwnPropertyNames_MOZG = window.__MOZG.WimdowGetOwnPropertyNames;
 
   let difference = WimdowGetOwnPropertyNames.filter(
