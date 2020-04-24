@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-labs"]=this["webpackJsonpreact-labs"]||[]).push([[27],{103:function(a,s,t){a.exports=t.p+"static/media/README.5068e019.markdown"}}]);
-//# sourceMappingURL=27.d35e50ca.chunk.js.map

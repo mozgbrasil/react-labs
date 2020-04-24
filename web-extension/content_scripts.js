@@ -10,27 +10,19 @@ console.log("starting: content_script.js");
 
 //
 
-// let obj = {
-//   this: this,
-//   window: window,
-//   document: document,
-//   "document.location": document.location,
-//   chrome: chrome,
-//   "chrome.app": chrome.app,
-//   "chrome.csi": chrome.csi,
-//   "chrome.extension": chrome.extension,
-//   "chrome.i18n": chrome.i18n,
-//   "chrome.loadTimes": chrome.loadTimes,
-//   "chrome.runtime": chrome.runtime
-// };
+let obj = {
+  //   "window: ": window,
+  "chrome: ": chrome // web = (4) ["app", "csi", "loadTimes", "runtime"] | web-extension = (3) ["app", "csi", "loadTimes"]
+  //   "chrome.app: ": chrome.app,
+  //   "chrome.csi: ": chrome.csi,
+  //   "chrome.runtime: ": chrome.runtime,
+  //   "chrome.loadTimes: ": chrome.loadTimes
+};
 
-// for (var [key, value] of Object.entries(obj)) {
-//   // console.log(`key: ${key} - value: ${value}`);
-//   let label = key;
-//   // console.log("label typeof: ", typeof label);
-//   // console.log("value typeof: ", typeof value);
-//   console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
-// }
+for (var [key, value] of Object.entries(obj)) {
+  let label = key;
+  console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
+}
 
 //
 

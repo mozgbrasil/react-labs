@@ -1,0 +1,2 @@
+(this["webpackJsonp@mozg/react-labs"]=this["webpackJsonp@mozg/react-labs"]||[]).push([[28],{106:function(s,t,e){s.exports=e.p+"static/media/license.fb993edd.txt"}}]);
+//# sourceMappingURL=28.8c35ff4c.chunk.js.map

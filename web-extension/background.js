@@ -1,25 +1,28 @@
 /* global chrome */
 
-console.log = function() {};
+// console.log = function() {};
 
 // https://developer.chrome.com/extensions
 
 //
 
-console.log("starting: background.js: ");
+console.log("starting: ", this);
 
 //
 
-// var items = [
-//   // "window",
-//   "chrome",
-//   "chrome.runtime"
-// ];
+let obj = {
+  //   "window: ": window,
+  "chrome: ": chrome //
+  //   "chrome.app: ": chrome.app,
+  //   "chrome.csi: ": chrome.csi,
+  //   "chrome.runtime: ": chrome.runtime,
+  //   "chrome.loadTimes: ": chrome.loadTimes
+};
 
-// // items.forEach
-// items.map(function(value, index) {
-//   console.log(`${value}: `, Object.getOwnPropertyNames(eval(value)).sort());
-// });
+for (var [key, value] of Object.entries(obj)) {
+  let label = key;
+  console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
+}
 
 //
 
