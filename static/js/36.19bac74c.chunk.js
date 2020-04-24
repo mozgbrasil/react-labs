@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-labs"]=this["webpackJsonpreact-labs"]||[]).push([[36],{99:function(e,s,a){e.exports=a.p+"static/media/mascote-cerebrum-3d.dbefe11c.png"}}]);
-//# sourceMappingURL=36.19bac74c.chunk.js.map
