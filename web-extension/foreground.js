@@ -6,34 +6,37 @@ console.log("starting foreground.js: ");
 
 //
 
-let WimdowGetOwnPropertyNames = Object.getOwnPropertyNames(window).sort();
-// console.log("WimdowGetOwnPropertyNames: ", WimdowGetOwnPropertyNames);
+// let WimdowGetOwnPropertyNames = Object.getOwnPropertyNames(window).sort();
+// // console.log("WimdowGetOwnPropertyNames: ", WimdowGetOwnPropertyNames);
 
-if (window.__MOZG.WimdowGetOwnPropertyNames) {
-  let WimdowGetOwnPropertyNames_MOZG = window.__MOZG.WimdowGetOwnPropertyNames;
+// if (window.__MOZG.WimdowGetOwnPropertyNames) {
+//   let WimdowGetOwnPropertyNames_MOZG = window.__MOZG.WimdowGetOwnPropertyNames;
 
-  let difference = WimdowGetOwnPropertyNames.filter(
-    x => !WimdowGetOwnPropertyNames_MOZG.includes(x)
-  ).concat(
-    WimdowGetOwnPropertyNames_MOZG.filter(
-      x => !WimdowGetOwnPropertyNames.includes(x)
-    )
-  );
+//   let difference = WimdowGetOwnPropertyNames.filter(
+//     x => !WimdowGetOwnPropertyNames_MOZG.includes(x)
+//   ).concat(
+//     WimdowGetOwnPropertyNames_MOZG.filter(
+//       x => !WimdowGetOwnPropertyNames.includes(x)
+//     )
+//   );
 
-  //   console.log("difference in foreground.js: ", difference);
-}
+//   //   console.log("difference in foreground.js: ", difference);
+// }
 
 //
 
-// let obj = {
-//   window: window,
-//   "chrome.runtime": chrome.runtime
-// };
+let obj = {
+  "window: ": window,
+  "chrome: ": chrome,
+  "chrome.app: ": chrome.app,
+  "chrome.csi: ": chrome.csi,
+  "chrome.loadTimes: ": chrome.loadTimes
+};
 
-// for (var [key, value] of Object.entries(obj)) {
-//   let label = key;
-//   console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
-// }
+for (var [key, value] of Object.entries(obj)) {
+  let label = key;
+  console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
+}
 
 //
 

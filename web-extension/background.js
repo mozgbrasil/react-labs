@@ -142,19 +142,6 @@ const sendMessageToAllTabs = messageData => {
 
 //
 
-var _AnalyticsCode = "UA-73869264-1",
-  _gaq = _gaq || [];
-_gaq.push(["_setAccount", _AnalyticsCode]),
-  _gaq.push(["_trackEvent", "install", "" + new Date().getTime()]),
-  (function() {
-    var e = document.createElement("script");
-    (e.type = "text/javascript"),
-      (e.async = !0),
-      (e.src = "https://ssl.google-analytics.com/ga.js");
-    var t = document.getElementsByTagName("script")[0];
-    t.parentNode.insertBefore(e, t);
-  })();
-
 //
 
 //

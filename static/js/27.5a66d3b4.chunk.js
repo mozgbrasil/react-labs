@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-labs"]=this["webpackJsonpreact-labs"]||[]).push([[27],{92:function(a,t,s){a.exports=s.p+"static/media/Coat_of_arms_of_the_United_States_of_Brazil.aa23111e.svg"}}]);
+//# sourceMappingURL=27.5a66d3b4.chunk.js.map

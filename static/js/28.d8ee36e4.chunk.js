@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-labs"]=this["webpackJsonpreact-labs"]||[]).push([[28],{93:function(s,a,e){s.exports=e.p+"static/media/Emblem_of_the_Georgian_SSR.3d620056.svg"}}]);
+//# sourceMappingURL=28.d8ee36e4.chunk.js.map
