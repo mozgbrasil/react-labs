@@ -1,2 +1,0 @@
-(this["webpackJsonp@mozg/react-labs"]=this["webpackJsonp@mozg/react-labs"]||[]).push([[27],{103:function(a,s,t){a.exports=t.p+"static/media/README.5068e019.markdown"}}]);
-//# sourceMappingURL=27.5f346595.chunk.js.map

@@ -5,15 +5,15 @@
   "default_locale": "en",
   "description": "MOZG | React® | WebExtension",
   "icons": {
-    "16": "web-extension/icons/icon16.png",
-    "48": "web-extension/icons/icon48.png",
-    "128": "web-extension/icons/icon128.png"
+    "16": "web-extension/logos/logo16.png",
+    "48": "web-extension/logos/logo48.png",
+    "128": "web-extension/logos/logo128.png"
   },
   "browser_action": {
     "default_icon": {
-      "16": "web-extension/icons/icon16.png",
-      "48": "web-extension/icons/icon48.png",
-      "128": "web-extension/icons/icon128.png"
+      "16": "web-extension/logos/logo16.png",
+      "48": "web-extension/logos/logo48.png",
+      "128": "web-extension/logos/logo128.png"
     },
     "default_title": "MOZG | React® | WebExtension",
     "_default_popup": "index.html"

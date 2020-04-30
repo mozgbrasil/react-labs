@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAMA,UACE,UAAW,CACX,YAAa,CACb,SAAY,CACZ,QACF","file":"15.34ea9111.chunk.css","sourcesContent":["/* body{\n\t background-color: #000000;\n   padding: 0px;\n   margin: 0px;\n } */\n\n#gradient {\n  width: 100%;\n  height: 100vh;\n  padding: 0px;\n  margin: 0px;\n}\n"]}
