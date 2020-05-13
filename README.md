@@ -21,21 +21,19 @@ Um aplicativo [React®](https://react.org/) ...
 
 ## Instalando a Web-Extension
 
-Em ambiente local
+No chrome, conforme https://developer.chrome.com/extensions/
 
-Efetue o download da extensão
-
-Acesse (chrome://extensions)[chrome://extensions]
+Acesse chrome://extensions
 
 Ative "developer mode"
 
-Clique em "Carregar sem compactação" e selecione a pasta
+Clique em "Carregar sem compactação" e selecione a pasta contendo a extensão
 
-~~ou~~
+No firefox, conforme https://developer.mozilla.org/pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension
 
-~~google-chrome --load-extension=/home/marcio/dados/projects/javascripts/lerna-monorepo/packages/react-labs/build_chrome --silent-launch~~
+Acesse about:debugging#/runtime/this-firefox
 
-~~google-chrome --uninstall-extension=nfbhmljimlnkjkhdecjagaefdpiiikgm --silent-launch~~
+Clique em "Load Add-on" e selecione a pasta contendo a extensão
 
 ## Perguntas mais frequentes "FAQ"
 

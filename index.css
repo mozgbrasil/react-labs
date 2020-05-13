@@ -3,3 +3,9 @@
 pwa-install {
   --install-button-color: green !important;
 }
+
+/*  */
+
+#root {
+  min-height: 500px;
+}

@@ -16,7 +16,7 @@
       "128": "web-extension/logos/logo128.png"
     },
     "default_title": "MOZG | React® | WebExtension",
-    "_default_popup": "index.html"
+    "default_popup": "index.html"
   },
   "author": "Marcio dos Santos Amorim <mozgbrasil@gmail.com>",
   "background": {
@@ -38,25 +38,28 @@
   },
   "devtools_page": "web-extension/devtools.html",
   "homepage_url": "https://mozg.com.br/react-labs/",
+  "options_page": "web-extension/options.html",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "web-extension/options.html"
+  },
   "permissions": [
-    "<all_urls>",
+    "*://*/*",
     "activeTab",
+    "<all_urls>",
     "bookmarks",
     "clipboardRead",
     "clipboardWrite",
     "contextMenus",
     "cookies",
-    "debugger",
     "geolocation",
     "history",
-    "http://google.com/*",
-    "https://*/*",
     "idle",
     "management",
     "notifications",
     "tabs",
-    "webRequest",
     "webNavigation",
+    "webRequest",
     "webRequestBlocking"
   ],
   "short_name": "MOZG | Labs",

@@ -2,23 +2,26 @@
 
 // console.log = function() {};
 
-console.log("starting: ", this);
+// console.log("starting: ", this);
+
+var __MOZG = [];
+__MOZG.WimdowGetOwnPropertyNames = Object.getOwnPropertyNames(window).sort();
 
 //
 
-let obj = {
-  //   "window: ": window,
-  "chrome: ": chrome // web = (4) ["app", "csi", "loadTimes", "runtime"] | web-extension = (3) ["app", "csi", "loadTimes"]
-  //   "chrome.app: ": chrome.app,
-  //   "chrome.csi: ": chrome.csi,
-  //   "chrome.runtime: ": chrome.runtime,
-  //   "chrome.loadTimes: ": chrome.loadTimes
-};
+// let obj = {
+//   //   "window: ": window,
+//   "chrome: ": chrome // web = (4) ["app", "csi", "loadTimes", "runtime"] | web-extension = (3) ["app", "csi", "loadTimes"]
+//   //   "chrome.app: ": chrome.app,
+//   //   "chrome.csi: ": chrome.csi,
+//   //   "chrome.runtime: ": chrome.runtime,
+//   //   "chrome.loadTimes: ": chrome.loadTimes
+// };
 
-for (var [key, value] of Object.entries(obj)) {
-  let label = key;
-  console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
-}
+// for (var [key, value] of Object.entries(obj)) {
+//   let label = key;
+//   console.log(`${label}: `, Object.getOwnPropertyNames(value).sort());
+// }
 
 //
 
