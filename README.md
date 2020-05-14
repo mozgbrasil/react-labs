@@ -45,6 +45,8 @@ https://developer.chrome.com/extensions/manifest
 
 https://chrome.google.com/webstore/devconsole/register?hl=pt-BR
 
+https://developer.mozilla.org/pt-BR/docs/Mozilla/Add-ons/WebExtensions
+
 https://developer.mozilla.org/pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension
 
     addons-linter /home/marcio/dados/projects/javascripts/lerna-monorepo/packages/react-labs/build-web-extension/
@@ -61,7 +63,7 @@ chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/index.html
 `chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/_generated_background_page.html`
 chrome-extension://nfbhmljimlnkjkhdecjagaefdpiiikgm/web-extension/devtools.html
 
-### Download da Web-Extension
+### https://chrome-extension-downloader.com/how-does-it-work.php
 
 https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D~~~~%26installsource%3Dondemand%26uc
 
