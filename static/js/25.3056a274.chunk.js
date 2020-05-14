@@ -1,0 +1,1 @@
+(this["webpackJsonp@mozg/react-labs"]=this["webpackJsonp@mozg/react-labs"]||[]).push([[25],{165:function(s,t,e){s.exports=e.p+"static/media/license.fb993edd.txt"}}]);

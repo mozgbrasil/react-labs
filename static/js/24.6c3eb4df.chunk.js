@@ -1,0 +1,1 @@
+(this["webpackJsonp@mozg/react-labs"]=this["webpackJsonp@mozg/react-labs"]||[]).push([[24],{164:function(a,s,t){a.exports=t.p+"static/media/README.5068e019.markdown"}}]);

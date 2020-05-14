@@ -1,187 +1,195 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e8288536a08518ffb8e02c8ac851670",
+    "revision": "8bf5638aff1b6f07636ef7b77e6a33f6",
     "url": "/react-labs/index.html"
   },
   {
-    "revision": "06d4d09e6a7a020a091e",
-    "url": "/react-labs/static/css/11.7db9a6b6.chunk.css"
+    "revision": "feb5f69d163c6d399f68",
+    "url": "/react-labs/static/css/12.7db9a6b6.chunk.css"
   },
   {
-    "revision": "9adf779f99f9f6748619",
-    "url": "/react-labs/static/css/12.c62ab4bf.chunk.css"
+    "revision": "01e86a7e6213f9a778b9",
+    "url": "/react-labs/static/css/13.c62ab4bf.chunk.css"
   },
   {
-    "revision": "f6f149aa574237ad1820",
-    "url": "/react-labs/static/css/13.9250b8d9.chunk.css"
+    "revision": "9515d639a8bb2b43b00e",
+    "url": "/react-labs/static/css/14.9250b8d9.chunk.css"
   },
   {
-    "revision": "da6d9aa31eae63abf042",
-    "url": "/react-labs/static/css/15.78608f22.chunk.css"
+    "revision": "aae871b68cd41ed781f6",
+    "url": "/react-labs/static/css/16.67bfc4d6.chunk.css"
   },
   {
-    "revision": "4ceda2b86abaa2407a30",
-    "url": "/react-labs/static/css/16.e2d00f62.chunk.css"
+    "revision": "69c15a86943e93f91fa8",
+    "url": "/react-labs/static/css/17.78608f22.chunk.css"
   },
   {
-    "revision": "cddfed6b083b5d36569e",
-    "url": "/react-labs/static/css/17.9e39b631.chunk.css"
+    "revision": "801d0f0d0fec33a13802",
+    "url": "/react-labs/static/css/18.e2d00f62.chunk.css"
   },
   {
-    "revision": "ca8e712d4fbd3d8d4187",
-    "url": "/react-labs/static/css/18.5c3eb343.chunk.css"
+    "revision": "be96b27e099d33a17f74",
+    "url": "/react-labs/static/css/19.9e39b631.chunk.css"
   },
   {
-    "revision": "5ec57e818bf7c597ee8c",
-    "url": "/react-labs/static/css/19.dc1860ed.chunk.css"
+    "revision": "bb510684a8e5f6ec4a5b",
+    "url": "/react-labs/static/css/20.dc1860ed.chunk.css"
   },
   {
-    "revision": "0ca5c62758de16548b79",
-    "url": "/react-labs/static/css/20.85f2c791.chunk.css"
+    "revision": "6448820cab1a5bacaaa0",
+    "url": "/react-labs/static/css/21.85f2c791.chunk.css"
   },
   {
-    "revision": "561f7f26963bdb4ec6d4",
-    "url": "/react-labs/static/css/21.8cafbb22.chunk.css"
+    "revision": "94f73ac4db5d0b11e815",
+    "url": "/react-labs/static/css/22.8cafbb22.chunk.css"
   },
   {
-    "revision": "a6dd7d1704c829534315",
+    "revision": "1c1d1df9365a92eddf09",
     "url": "/react-labs/static/css/4.7db9a6b6.chunk.css"
   },
   {
-    "revision": "c28991edaaed6d3c377a",
+    "revision": "7cf8be479ddafe38fcf7",
     "url": "/react-labs/static/css/8.70514acf.chunk.css"
   },
   {
-    "revision": "aaf2f7052bea59c94a1e",
+    "revision": "baeaa8b875c9d6e2a4ce",
     "url": "/react-labs/static/css/9.397a7f48.chunk.css"
   },
   {
-    "revision": "af674b154e526376a65c",
+    "revision": "a28b7ab11d320af44431",
     "url": "/react-labs/static/css/main.eecccef5.chunk.css"
   },
   {
-    "revision": "1e1cb794a842826c3d0f",
-    "url": "/react-labs/static/js/0.b7bfb66e.chunk.js"
+    "revision": "12a6478fdea0fe59dfb0",
+    "url": "/react-labs/static/js/0.07435a25.chunk.js"
   },
   {
     "revision": "51255ce84f566e10a705c5ca98edd89d",
-    "url": "/react-labs/static/js/0.b7bfb66e.chunk.js.LICENSE.txt"
+    "url": "/react-labs/static/js/0.07435a25.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0492039433dd068629fe",
-    "url": "/react-labs/static/js/1.909c8bab.chunk.js"
+    "revision": "1ba14d0671e5dcbdb9aa",
+    "url": "/react-labs/static/js/1.5a3af9fd.chunk.js"
+  },
+  {
+    "revision": "29e267f8b45a991d6f41",
+    "url": "/react-labs/static/js/10.c8bee1ca.chunk.js"
+  },
+  {
+    "revision": "f60d1c7c6a74eb776d1b",
+    "url": "/react-labs/static/js/11.d7010dd3.chunk.js"
+  },
+  {
+    "revision": "469d0453cfdb0a49289896d158e1cb53",
+    "url": "/react-labs/static/js/11.d7010dd3.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "feb5f69d163c6d399f68",
+    "url": "/react-labs/static/js/12.1838af8c.chunk.js"
+  },
+  {
+    "revision": "01e86a7e6213f9a778b9",
+    "url": "/react-labs/static/js/13.b5c0732e.chunk.js"
+  },
+  {
+    "revision": "9515d639a8bb2b43b00e",
+    "url": "/react-labs/static/js/14.279e3766.chunk.js"
+  },
+  {
+    "revision": "354a2661c0425f603caf",
+    "url": "/react-labs/static/js/15.e609d091.chunk.js"
+  },
+  {
+    "revision": "aae871b68cd41ed781f6",
+    "url": "/react-labs/static/js/16.a470a659.chunk.js"
+  },
+  {
+    "revision": "69c15a86943e93f91fa8",
+    "url": "/react-labs/static/js/17.7c2e52cf.chunk.js"
+  },
+  {
+    "revision": "801d0f0d0fec33a13802",
+    "url": "/react-labs/static/js/18.a3318c4e.chunk.js"
+  },
+  {
+    "revision": "be96b27e099d33a17f74",
+    "url": "/react-labs/static/js/19.76d09765.chunk.js"
+  },
+  {
+    "revision": "28d8005906d4acb06e7a",
+    "url": "/react-labs/static/js/2.430d07aa.chunk.js"
   },
   {
     "revision": "4603f8fa440947085143ec7aca0a512b",
-    "url": "/react-labs/static/js/1.909c8bab.chunk.js.LICENSE.txt"
+    "url": "/react-labs/static/js/2.430d07aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c7b51867e4b5056f3e0",
-    "url": "/react-labs/static/js/10.af349726.chunk.js"
+    "revision": "bb510684a8e5f6ec4a5b",
+    "url": "/react-labs/static/js/20.14dd6105.chunk.js"
   },
   {
-    "revision": "06d4d09e6a7a020a091e",
-    "url": "/react-labs/static/js/11.6aa41d74.chunk.js"
+    "revision": "6448820cab1a5bacaaa0",
+    "url": "/react-labs/static/js/21.374df691.chunk.js"
   },
   {
-    "revision": "9adf779f99f9f6748619",
-    "url": "/react-labs/static/js/12.c608bd48.chunk.js"
+    "revision": "94f73ac4db5d0b11e815",
+    "url": "/react-labs/static/js/22.2ffa1062.chunk.js"
   },
   {
-    "revision": "f6f149aa574237ad1820",
-    "url": "/react-labs/static/js/13.98d29027.chunk.js"
+    "revision": "ff2b01fc85b185c2ad6b",
+    "url": "/react-labs/static/js/23.943239b6.chunk.js"
   },
   {
-    "revision": "9e25c1f1f1e8e80ca3d3",
-    "url": "/react-labs/static/js/14.d641c3fb.chunk.js"
+    "revision": "a10acc245b813a450bb1",
+    "url": "/react-labs/static/js/24.6c3eb4df.chunk.js"
   },
   {
-    "revision": "da6d9aa31eae63abf042",
-    "url": "/react-labs/static/js/15.f7c9f533.chunk.js"
+    "revision": "b8e0dd0eb35a741fcc9c",
+    "url": "/react-labs/static/js/25.3056a274.chunk.js"
   },
   {
-    "revision": "4ceda2b86abaa2407a30",
-    "url": "/react-labs/static/js/16.49b109b0.chunk.js"
+    "revision": "b69939b862a3ef5a9332",
+    "url": "/react-labs/static/js/26.88475a0e.chunk.js"
   },
   {
-    "revision": "cddfed6b083b5d36569e",
-    "url": "/react-labs/static/js/17.8a10cfaf.chunk.js"
+    "revision": "d6e18ed14ff2e03a1afb",
+    "url": "/react-labs/static/js/27.2861bd60.chunk.js"
   },
   {
-    "revision": "ca8e712d4fbd3d8d4187",
-    "url": "/react-labs/static/js/18.dd05b989.chunk.js"
+    "revision": "f9cf34a3ca833ea4bb65",
+    "url": "/react-labs/static/js/3.bb5ce3b5.chunk.js"
   },
   {
-    "revision": "5ec57e818bf7c597ee8c",
-    "url": "/react-labs/static/js/19.828b77ef.chunk.js"
+    "revision": "1c1d1df9365a92eddf09",
+    "url": "/react-labs/static/js/4.ba16dea1.chunk.js"
   },
   {
-    "revision": "9a969f404ba7c8628fce",
-    "url": "/react-labs/static/js/2.28ed1995.chunk.js"
-  },
-  {
-    "revision": "0ca5c62758de16548b79",
-    "url": "/react-labs/static/js/20.b94144a1.chunk.js"
-  },
-  {
-    "revision": "561f7f26963bdb4ec6d4",
-    "url": "/react-labs/static/js/21.53a0a460.chunk.js"
-  },
-  {
-    "revision": "4bcfeae4cd0f3bb87a32",
-    "url": "/react-labs/static/js/22.130b1e7e.chunk.js"
-  },
-  {
-    "revision": "5e2a3e5d9aab3096bc30",
-    "url": "/react-labs/static/js/23.e1183511.chunk.js"
-  },
-  {
-    "revision": "d2d154b0f4e9f81c53a3",
-    "url": "/react-labs/static/js/24.770a3400.chunk.js"
-  },
-  {
-    "revision": "e74e82e045327435a593",
-    "url": "/react-labs/static/js/25.06e5c9aa.chunk.js"
-  },
-  {
-    "revision": "4a0e7ff145b9d48f29f6",
-    "url": "/react-labs/static/js/26.59305392.chunk.js"
-  },
-  {
-    "revision": "7cb97751d39e39a269bb",
-    "url": "/react-labs/static/js/3.691e6220.chunk.js"
-  },
-  {
-    "revision": "a6dd7d1704c829534315",
-    "url": "/react-labs/static/js/4.4ceeb796.chunk.js"
-  },
-  {
-    "revision": "1e36f4f497f7ca9fbce1",
-    "url": "/react-labs/static/js/7.3145b0a3.chunk.js"
+    "revision": "90a9338dbd19c29a5c18",
+    "url": "/react-labs/static/js/7.bc028ebf.chunk.js"
   },
   {
     "revision": "e7cad5e8c80a4a756b57f883a8b131b2",
-    "url": "/react-labs/static/js/7.3145b0a3.chunk.js.LICENSE.txt"
+    "url": "/react-labs/static/js/7.bc028ebf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c28991edaaed6d3c377a",
-    "url": "/react-labs/static/js/8.ce0a893c.chunk.js"
+    "revision": "7cf8be479ddafe38fcf7",
+    "url": "/react-labs/static/js/8.d663ab51.chunk.js"
   },
   {
-    "revision": "aaf2f7052bea59c94a1e",
-    "url": "/react-labs/static/js/9.7eece8f8.chunk.js"
+    "revision": "baeaa8b875c9d6e2a4ce",
+    "url": "/react-labs/static/js/9.ec136048.chunk.js"
   },
   {
     "revision": "da9b536e5796f65df5059e64759c9942",
-    "url": "/react-labs/static/js/9.7eece8f8.chunk.js.LICENSE.txt"
+    "url": "/react-labs/static/js/9.ec136048.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af674b154e526376a65c",
-    "url": "/react-labs/static/js/main.0ed29eb3.chunk.js"
+    "revision": "a28b7ab11d320af44431",
+    "url": "/react-labs/static/js/main.522f2d23.chunk.js"
   },
   {
-    "revision": "4a239ae345b1d081fba8",
-    "url": "/react-labs/static/js/runtime-main.fbcf30e6.js"
+    "revision": "bd2f737ce4c6934842b7",
+    "url": "/react-labs/static/js/runtime-main.254ca2d6.js"
   },
   {
     "revision": "5068e01920afe9942d822733f43b0c0f",
@@ -202,6 +210,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e0c41e218300b108279dfd69224873a8",
     "url": "/react-labs/static/media/codropsicons.e0c41e21.eot"
+  },
+  {
+    "revision": "ab7b6e3aa300bd05bd5bb0ab30aa4647",
+    "url": "/react-labs/static/media/diamond.ab7b6e3a.glb"
   },
   {
     "revision": "0cb5a5c0d251c109458c85c6afeffbaa",
