@@ -37,20 +37,29 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
               </li>
               <li>
-                <Link to="/droga-raia">Droga Raia</Link>
+                <Link to={`${process.env.PUBLIC_URL}/droga-raia`}>
+                  Droga Raia
+                </Link>
               </li>
               <li>
-                <Link to="/users">Users</Link>
+                <Link to={`${process.env.PUBLIC_URL}/users`}>Users</Link>
               </li>
             </ul>
           </nav>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/index.html" component={Home} />
-            <Route path="/droga-raia" component={DrogaRaia} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/index.html`}
+              component={Home}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/droga-raia`}
+              component={DrogaRaia}
+            />
             <Route component={NoMatch} />
           </Switch>
         </>
