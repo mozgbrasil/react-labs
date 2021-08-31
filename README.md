@@ -10,7 +10,7 @@ Escopo
 
 Implantação
 
-- http://localhost:3000/test-droga-raia/
+- http://localhost:3000/droga-raia
 
 # Droga Raia
 

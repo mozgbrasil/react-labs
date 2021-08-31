@@ -34,7 +34,7 @@ function App() {
     <>
       <Router>
         <>
-          {/* <nav>
+          <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -46,7 +46,7 @@ function App() {
                 <Link to="/users">Users</Link>
               </li>
             </ul>
-          </nav> */}
+          </nav>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/index.html" component={Home} />
