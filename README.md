@@ -2,31 +2,31 @@
 
 ![valid XHTML][checkmark]
 
-# Testes React.js
+# react-labs
 
 https://create-react-app.dev/docs/adding-typescript/
 
-## xxx
+## Contribuição
 
-Escopo
+Caso queira contribuir para melhoria da documentação de um Fork no repositório e envie um pull request ou edite no github
 
-- http://localhost:3000/test-droga-raia/
+## Requerimentos
 
-Implantação
+- https://www.docker.com/
+- https://code.visualstudio.com/
+- https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
-- http://localhost:3000/droga-raia
+## Executando local
 
-# Droga Raia
+```
+git clone ☝️
 
-Escopo
+cd <directory>
 
-- http://localhost:3000/test-droga-raia/
+code --new-window .
+```
 
-Implantação
-
-- http://localhost:3000/test-droga-raia/
-
---
+## Executando no container
 
 # Getting Started with Create React App
 

@@ -14,12 +14,24 @@ function Home() {
     </div>
   );
 }
+
 const DrogaRaiaComponent = React.lazy(() => import("./droga-raia/App"));
 function DrogaRaia() {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <DrogaRaiaComponent />
+      </Suspense>
+    </div>
+  );
+}
+
+const OlderDrawComponent = React.lazy(() => import("./older-draw/App"));
+function OlderDraw() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OlderDrawComponent />
       </Suspense>
     </div>
   );
@@ -45,7 +57,9 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to={`${process.env.PUBLIC_URL}/users`}>Users</Link>
+                <Link to={`${process.env.PUBLIC_URL}/older-draw`}>
+                  Older Draw
+                </Link>
               </li>
             </ul>
           </nav>
@@ -59,6 +73,10 @@ function App() {
             <Route
               path={`${process.env.PUBLIC_URL}/droga-raia`}
               component={DrogaRaia}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/older-draw`}
+              component={OlderDraw}
             />
             <Route component={NoMatch} />
           </Switch>
