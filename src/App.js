@@ -37,6 +37,19 @@ function OlderDraw() {
   );
 }
 
+const HazibiiLandingPageComponent = React.lazy(() =>
+  import("./hazibii-landing-page/App")
+);
+function HazibiiLandingPage() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <HazibiiLandingPageComponent />
+      </Suspense>
+    </div>
+  );
+}
+
 function NoMatch() {
   return <h2>404</h2>;
 }
@@ -61,6 +74,11 @@ function App() {
                   Older Draw
                 </Link>
               </li>
+              <li>
+                <Link to={`${process.env.PUBLIC_URL}/hazibii-landing-page`}>
+                  hazibii landing page
+                </Link>
+              </li>
             </ul>
           </nav>
           <Switch>
@@ -77,6 +95,10 @@ function App() {
             <Route
               path={`${process.env.PUBLIC_URL}/older-draw`}
               component={OlderDraw}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/hazibii-landing-page`}
+              component={HazibiiLandingPage}
             />
             <Route component={NoMatch} />
           </Switch>
