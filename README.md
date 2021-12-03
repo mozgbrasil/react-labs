@@ -2,7 +2,7 @@
 
 ![valid XHTML][checkmark]
 
-# react-labs
+# react-labs 👉️
 
 https://create-react-app.dev/docs/adding-typescript/
 
